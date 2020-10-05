@@ -88,7 +88,7 @@ dl:nth-child(3) dt {
 
 figure#distancias svg text {
     font-family: Source-Sans-Pro, sans-serif;
-    font-weight: 300; 
+    font-weight: 300;
     font-size: 20px;
     fill:#647f60;
 }
@@ -100,7 +100,7 @@ figure#distancias svg circle.intimate {
 
 figure#distancias svg circle.personal {
     stroke: #5e725f;
-    stroke-dasharray: 8 10;
+    stroke-dasharray: 8, 10;
     fill: none;
 }
 
@@ -168,7 +168,7 @@ footer a:hover{
     width: auto;
     position: absolute;
     animation-name: pasando-por-el-camino;
-    animation-duration: 5s;
+    animation-duration: 10s;
     animation-iteration-count: infinite;
 }
 
@@ -183,4 +183,31 @@ footer a:hover{
     position: relative;
     overflow: hidden;
     height: 150px;
+}
+
+@keyframes pasando-por-el-canal {
+    from {
+        left: 105vw;
+        top: 0;
+    }
+    to {
+        left: -10vw;
+        top: 0;
+    }
+}
+
+.canal img {
+    height: 100px;
+    width: auto;
+    position: absolute;
+    animation-name: pasando-por-el-canal;
+    animation-duration: 15s;
+    animation-iteration-count: infinite;
+}
+
+@media (max-width: 768px) {
+    .canal img {
+        height: 80px;
+        width: auto;
+    }
 }
